@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Computer Science Hub - Contact</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="contact.js"></script>
+</head>
+<body>
+    <header>
+        <div class="featured-image">
+            <a href="https://www.bing.com/ck/a?!&&p=21a306c7711d61a0JmltdHM9MTcwMTA0MzIwMCZpZ3VpZD0zOTMwYTAwMi1kY2FkLTZiYzYtMzAxNy1iMjYyZGQwNzZhZDUmaW5zaWQ9NTIzNg&ptn=3&ver=2&hsh=3&fclid=3930a002-dcad-6bc6-3017-b262dd076ad5&psq=university+of+windsor&u=a1aHR0cHM6Ly93d3cudXdpbmRzb3IuY2Ev&ntb=1" target="Uwindsor">
+                <img src="image2.png" alt="University of Windsor logo">
+            </a>
+        </div>
+        <h1>Computer Science Hub</h1>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="courses.html">Courses</a></li>
+                <li><a href="tutorials.html">Tutorials</a></li>
+                <li><a href="resources.html">Student Resources</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Contact Us</h1>
+        <form id="contactForm" action="contact.php" method="post" onsubmit="return validateForm()">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+            <input type="submit" value="Submit">
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Computer Science Hub</p>
+    </footer>
+    <script src="contact.js"></script>
+</body>
+</html>

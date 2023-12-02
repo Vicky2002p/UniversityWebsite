@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Computer Science Hub - Tutorials</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="featured-image">
+            <a href="https://www.bing.com/ck/a?!&&p=21a306c7711d61a0JmltdHM9MTcwMTA0MzIwMCZpZ3VpZD0zOTMwYTAwMi1kY2FkLTZiYzYtMzAxNy1iMjYyZGQwNzZhZDUmaW5zaWQ9NTIzNg&ptn=3&ver=2&hsh=3&fclid=3930a002-dcad-6bc6-3017-b262dd076ad5&psq=university+of+windsor&u=a1aHR0cHM6Ly93d3cudXdpbmRzb3IuY2Ev&ntb=1" target="Uwindsor">
+                <img src="image2.png" alt="University of Windsor logo">
+            </a>
+        </div>
+        <h1>Computer Science Hub</h1>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="courses.html">Courses</a></li>
+                <li><a href="tutorials.html" class="active">Tutorials</a></li>
+                <li><a href="resources.html">Student Resources</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Tutorials</h1>
+        <div id="tutorial-search">
+            <input type="text" id="searchInput" placeholder="Search tutorials..." onkeyup="filterTutorials()">
+        </div>
+        <div id="tutorials-list">
+            <!-- Tutorial items will be added here -->
+            <div class="tutorial">
+                <h3>Introduction to JavaScript</h3>
+                <p>A beginner's guide to JavaScript.</p>
+                <a href="https://www.w3schools.com/js/DEFAULT.asp">Read more</a>
+            </div>
+            <div class="tutorial">
+                <h3>Introduction to Html</h3>
+                <p>A beginner's guide to Html.</p>
+                <a href="https://www.w3schools.com/html/">Read more</a>
+            </div>
+            <div class="tutorial">
+                <h3>Introduction to CSS</h3>
+                <p>A beginner's guide to CSS.</p>
+                <a href="https://www.w3schools.com/css/">Read more</a>
+            </div>
+            <div class="tutorial">
+                <h3>Introduction to Python</h3>
+                <p>A beginner's guide to Python.</p>
+                <a href="https://www.w3schools.com/python/">Read more</a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Computer Science Hub</p>
+    </footer>
+
+    <script src="tutorials.js"></script>
+</body>
+</html>

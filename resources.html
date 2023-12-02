@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Computer Science Hub - Student Resources</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="featured-image">
+            <a href="https://www.bing.com/ck/a?!&&p=21a306c7711d61a0JmltdHM9MTcwMTA0MzIwMCZpZ3VpZD0zOTMwYTAwMi1kY2FkLTZiYzYtMzAxNy1iMjYyZGQwNzZhZDUmaW5zaWQ9NTIzNg&ptn=3&ver=2&hsh=3&fclid=3930a002-dcad-6bc6-3017-b262dd076ad5&psq=university+of+windsor&u=a1aHR0cHM6Ly93d3cudXdpbmRzb3IuY2Ev&ntb=1" target="Uwindsor">
+                <img src="image2.png" alt="University of Windsor logo">
+            </a>
+        </div>
+        <h1>Computer Science Hub</h1>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="courses.html">Courses</a></li>
+                <li><a href="tutorials.html">Tutorials</a></li>
+                <li><a href="resources.html" class="active">Student Resources</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Student Resources</h1>
+        <section id="resources-list">
+            <h2>Available Resources</h2>
+            <!-- PHP to list resources -->
+            <?php
+            $dir = "uploads/";
+            if (is_dir($dir)){
+                if ($dh = opendir($dir)){
+                    while (($file = readdir($dh)) !== false){
+                        if ($file != "." && $file != "..") {
+                            echo "<div class='resource-item'><a href='https://www.google.com/aclk?sa=l&ai=DChcSEwiO_d26peeCAxWmC60GHeLzBx8YABAIGgJwdg&ase=2&gclid=CjwKCAiAvJarBhA1EiwAGgZl0LFnhW6oMpRGEFN2lpD44F3jsJuBIpPioQNX1_MRucy8eV0xylCr4BoCP-EQAvD_BwE&sig=AOD64_0fwG-MHzx9EQvq_2bMUp3C5iKauA&ctype=5&q=&nis=4&ved=2ahUKEwjP69W6peeCAxXnFzQIHdO4Ao8Qww8oAnoECAEQCQ&adurl=' download>$file</a></div>";
+                        }
+                    }
+                    
+                    closedir($dh);
+                }
+            }
+            ?>
+            <div class="resource-item">
+                <h3>e-Book on Data Structures</h3>
+                <p>Description of the e-book.</p>
+                <a href="data-structures.pdf" download>Download</a>
+            </div>
+
+        </section>
+
+        <section id="upload-section">
+            <h2>Upload Course Materials</h2>
+            <form action="resources.php" method="post" enctype="multipart/form-data">
+                Select file to upload:
+                <input type="file" name="fileToUpload" id="fileToUpload">
+                <input type="submit" value="Upload File" name="submit">
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Computer Science Hub</p>
+    </footer>
+    <script src="resources.js"></script>
+</body>
+</html>
